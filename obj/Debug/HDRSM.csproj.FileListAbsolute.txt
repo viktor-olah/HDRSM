@@ -1,0 +1,41 @@
+G:\Saját meghajtó\Programozás\GIT\HDRSM\bin\Debug\HDRSM.exe.config
+G:\Saját meghajtó\Programozás\GIT\HDRSM\bin\Debug\HDRSM.exe
+G:\Saját meghajtó\Programozás\GIT\HDRSM\bin\Debug\HDRSM.pdb
+G:\Saját meghajtó\Programozás\GIT\HDRSM\obj\Debug\HDRSM.csproj.AssemblyReference.cache
+G:\Saját meghajtó\Programozás\GIT\HDRSM\obj\Debug\HDRSM.csproj.SuggestedBindingRedirects.cache
+G:\Saját meghajtó\Programozás\GIT\HDRSM\obj\Debug\HDRSM.Properties.Resources.resources
+G:\Saját meghajtó\Programozás\GIT\HDRSM\obj\Debug\HDRSM.csproj.GenerateResource.cache
+G:\Saját meghajtó\Programozás\GIT\HDRSM\obj\Debug\HDRSM.csproj.CoreCompileInputs.cache
+G:\Saját meghajtó\Programozás\GIT\HDRSM\obj\Debug\HDRSM.exe
+G:\Saját meghajtó\Programozás\GIT\HDRSM\obj\Debug\HDRSM.pdb
+G:\Saját meghajtó\Programozás\GIT\HDRSM\obj\Debug\HDRSM.Form1.resources
+G:\Saját meghajtó\Programozás\GIT\HDRSM\obj\Debug\HDRSM.Forms.NewItem.resources
+G:\Saját meghajtó\Programozás\GIT\HDRSM\obj\Debug\HDRSM.Forms.DatabaseList.resources
+C:\Users\Viktor\Desktop\HDRSM\bin\Debug\HDRSM.exe.config
+C:\Users\Viktor\Desktop\HDRSM\bin\Debug\HDRSM.exe
+C:\Users\Viktor\Desktop\HDRSM\bin\Debug\HDRSM.pdb
+C:\Users\Viktor\Desktop\HDRSM\obj\Debug\HDRSM.csproj.AssemblyReference.cache
+C:\Users\Viktor\Desktop\HDRSM\obj\Debug\HDRSM.csproj.SuggestedBindingRedirects.cache
+C:\Users\Viktor\Desktop\HDRSM\obj\Debug\HDRSM.Forms.DatabaseList.resources
+C:\Users\Viktor\Desktop\HDRSM\obj\Debug\HDRSM.Form1.resources
+C:\Users\Viktor\Desktop\HDRSM\obj\Debug\HDRSM.Forms.NewItem.resources
+C:\Users\Viktor\Desktop\HDRSM\obj\Debug\HDRSM.Properties.Resources.resources
+C:\Users\Viktor\Desktop\HDRSM\obj\Debug\HDRSM.csproj.GenerateResource.cache
+C:\Users\Viktor\Desktop\HDRSM\obj\Debug\HDRSM.csproj.CoreCompileInputs.cache
+C:\Users\Viktor\Desktop\HDRSM\obj\Debug\HDRSM.exe
+C:\Users\Viktor\Desktop\HDRSM\obj\Debug\HDRSM.pdb
+C:\Users\Viktor\Desktop\HDRSM\obj\Debug\HDRSM.Forms.PlaceChange.resources
+C:\GIT\HDRSM\bin\Debug\HDRSM.exe.config
+C:\GIT\HDRSM\bin\Debug\HDRSM.exe
+C:\GIT\HDRSM\bin\Debug\HDRSM.pdb
+C:\GIT\HDRSM\obj\Debug\HDRSM.csproj.AssemblyReference.cache
+C:\GIT\HDRSM\obj\Debug\HDRSM.csproj.SuggestedBindingRedirects.cache
+C:\GIT\HDRSM\obj\Debug\HDRSM.Forms.DatabaseList.resources
+C:\GIT\HDRSM\obj\Debug\HDRSM.Form1.resources
+C:\GIT\HDRSM\obj\Debug\HDRSM.Forms.NewItem.resources
+C:\GIT\HDRSM\obj\Debug\HDRSM.Forms.PlaceChange.resources
+C:\GIT\HDRSM\obj\Debug\HDRSM.Properties.Resources.resources
+C:\GIT\HDRSM\obj\Debug\HDRSM.csproj.GenerateResource.cache
+C:\GIT\HDRSM\obj\Debug\HDRSM.csproj.CoreCompileInputs.cache
+C:\GIT\HDRSM\obj\Debug\HDRSM.exe
+C:\GIT\HDRSM\obj\Debug\HDRSM.pdb
