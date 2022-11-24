@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HDRSM.Classes;
 
 namespace HDRSM.Classes
 {
@@ -14,6 +15,7 @@ namespace HDRSM.Classes
         string hadrianusID;
         ushort storagePlace;
         //string category;
+     
 
         public Product(string hadrianusID, ushort storagePlace)
         {
@@ -44,16 +46,10 @@ namespace HDRSM.Classes
             dataWrite.Close();
             csvFile.Close();
 
-            createBackup();
+            DirectoryManagement.createBackup(DirectoryManagement.backupDirectoryPath, DirectoryManagement.dataFileLocation,DirectoryManagement.backupFilePath);
         }
 
-        public static void createBackup()
-        {
-            string backupDirectoryPath = $"database/backup/{DateTime.Now.ToString("yyyyMMdd_HHmmss")}/";
-            string backupFilePath = $"database/backup/{DateTime.Now.ToString("yyyyMMdd_HHmmss")}/datafile.csv";
-            Directory.CreateDirectory(backupDirectoryPath);
-            File.Copy("database/datafile.csv", backupFilePath);
-        }
+       
         public static void dataFromCSV()
         {
             if (File.Exists("database/datafile.csv"))

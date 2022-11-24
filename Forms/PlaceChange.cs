@@ -28,8 +28,10 @@ namespace HDRSM.Forms
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
+            /*
             foreach (Product item in Data.Data.storage)
             {
+               
                 if (textBox1.Text.Replace('h','H').Trim() == item.HadrianusID)
                 {
                     label3.Visible = true;
@@ -38,8 +40,20 @@ namespace HDRSM.Forms
                     label3.Text = item.StoragePlace.ToString() + " a jelenlegi pozíciója" ;
                     oneProduct = item;
                 }
-               
             }
+            */
+
+            if (!string.IsNullOrEmpty(CSV.LFProdIDPlace(textBox1.Text.Replace('h', 'H').Trim())))
+            {
+
+                label3.Visible = true;
+                button1.Enabled = true;
+                label3.ForeColor = Color.Black;
+                label3.Text = CSV.LFProdIDPlace(textBox1.Text.Replace('h', 'H').Trim()) + " a jelenlegi pozíciója";
+                
+
+            }
+
             if (string.IsNullOrEmpty(label3.Text))
             {
                 label3.Visible = true;
@@ -53,8 +67,9 @@ namespace HDRSM.Forms
         {
             if (textBox1.Text !="" && textBox2.Text !="" )
             {
-                
-                oneProduct.StoragePlace = ushort.Parse(textBox2.Text);
+
+                CSV.PlaceReplace(new Product(textBox1.Text.Replace('h', 'H').Trim(),ushort.Parse(CSV.LFProdIDPlace(textBox1.Text.Replace('h', 'H').Trim()))), new Product(textBox1.Text.Replace('h', 'H').Trim(), ushort.Parse(textBox2.Text)));
+                //oneProduct.StoragePlace = ushort.Parse(textBox2.Text);
                 DialogResult = DialogResult.OK;
             }
 

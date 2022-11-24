@@ -7,17 +7,22 @@ using System.Threading.Tasks;
 
 namespace HDRSM.Classes
 {
-    internal class DirectoryManagement
+    internal static class DirectoryManagement
     {
+
         static internal void DirectoryStructureCheck()
         {
             if (!Directory.Exists("database"))
             {
                 Directory.CreateDirectory("database");
             }
-            if (!Directory.Exists("database/backup"))
+            if (!Directory.Exists("database/database_backup"))
             {
-                Directory.CreateDirectory("database/backup");
+                Directory.CreateDirectory("database/database_backup");
+            }
+            if (!Directory.Exists("database/keszlet_backup"))
+            {
+                Directory.CreateDirectory("database/keszlet_backup");
             }
             if (!Directory.Exists("pda_file_archiv"))
             {
@@ -39,6 +44,47 @@ namespace HDRSM.Classes
             {
                 Directory.CreateDirectory("raktarbol_ki");
             }
+            if (!Directory.Exists("keszlet_file"))
+            {
+                Directory.CreateDirectory("keszlet_file");
+            }
+            if (!Directory.Exists("eladhato_notek"))
+            {
+                Directory.CreateDirectory("eladhato_notek");
+            }
+
         }
+
+
+
+        #region Backup Section
+        /// <summary>
+        /// Original File location
+        /// </summary>
+        static public string dataFileLocation = "database/datafile.csv";
+        static public string keszletFileLocation = "database/keszlet.csv";
+        //
+
+        /// <summary>
+        /// Database file backup directory and file name.
+        /// </summary>
+        static public string backupDirectoryPath = $"database/database_backup/{DateTime.Now.ToString("yyyyMMdd_HHmmss")}/";
+        static public string backupFilePath = $"database/database_backup/{DateTime.Now.ToString("yyyyMMdd_HHmmss")}/datafile.csv";
+        //
+
+
+        /// <summary>
+        /// Backupfile to new backup folder
+        /// </summary>
+        /// <param name="createDirectoryPath">create new folder for the copy (route)</param>
+        /// <param name="FilePath">exact path of the file</param>
+        /// <param name="backupFilePath">backup route to copy folder</param>
+        public static void createBackup(string createDirectoryPath, string FilePath, string backupFilePath)
+        {
+            Directory.CreateDirectory(createDirectoryPath);
+            File.Copy(FilePath, backupFilePath);
+        }
+
+        #endregion
     }
 }

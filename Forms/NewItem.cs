@@ -33,12 +33,9 @@ namespace HDRSM.Forms
         {
             try
             {
-                duplicationCheck = false;
-                dupControl(textBox2.Text.Replace('h','H').Trim());
-                if (textBox1.Text != "" && textBox2.Text != "" && textBox2.Text.Length < 11 && textBox2.Text.Length >= 10 && duplicationCheck == false)
-                {
-
-                    Data.Data.storage.Add(new Classes.Product(textBox2.Text.Replace('h', 'H'), ushort.Parse(textBox1.Text.Trim())));
+                if (textBox1.Text != "" && textBox2.Text != "" && textBox2.Text.Length < 11 && textBox2.Text.Length >= 10 && CSV.duplicateCheck(textBox2.Text.Replace('h', 'H').Trim()) == false)
+                { 
+                    CSV.Add(new Product(textBox2.Text.Replace('h', 'H'), ushort.Parse(textBox1.Text.Trim())));
                     DialogResult = DialogResult.OK;
                 }
                 else
@@ -63,16 +60,6 @@ namespace HDRSM.Forms
             }
             
         }
-
-        private void dupControl(string tb2text)
-        {
-            foreach (Product item in Data.Data.storage)
-            {
-                if (item.HadrianusID == tb2text)
-                {
-                    duplicationCheck = true;
-                }
-            }
-        }
+       
     }
 }

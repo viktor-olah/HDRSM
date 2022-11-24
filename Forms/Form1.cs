@@ -56,12 +56,12 @@ namespace HDRSM
         private void Form1_Load(object sender, EventArgs e)
         {
             DirectoryManagement.DirectoryStructureCheck();
-
+            Keszlet.Keszlet_Read();
 
             try
             {
                 //First storage_data load to memory
-                Product.dataFromCSV();
+                //Product.dataFromCSV();
                 greencsv.Visible = true;
                 csvstop.Visible = false;
             } 
@@ -91,7 +91,8 @@ namespace HDRSM
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Product.dataToCSV(Data.Data.storage);
+           // Product.dataToCSV(Data.Data.storage);
+           // Keszlet.Keszlet_archive(Data.Data.notebooks);
         }
 
         #region Screen
@@ -136,6 +137,22 @@ namespace HDRSM
 
         private void IDControll(string hadrianusID)
         {
+            if (!string.IsNullOrEmpty(CSV.LFProdIDPlace(hadrianusID)))
+            {
+                label2.Visible = true;
+                label2.Text = $"A {hadrianusID} azonosító a {CSV.LFProdIDPlace(hadrianusID)}. rakhelyen található meg!";
+               
+                outOfStorageOption(hadrianusID);
+                tb1ItemTemp = hadrianusID;
+
+            }
+            else
+            {
+                label2.Visible = true;
+                label2.Text = $"A {hadrianusID} azonosító nem található a raktár rendszerben!";
+            }
+            ;
+            /*
             bool noItem = false;
             if (!string.IsNullOrEmpty(hadrianusID)) {
                 foreach (Product item in Data.Data.storage)
@@ -155,9 +172,10 @@ namespace HDRSM
                     label2.Text = $"A {hadrianusID} azonosító nem található a raktár rendszerben!";
                    
                 }
+            */
                
                
-            }
+            
            
         }
 
@@ -195,9 +213,10 @@ namespace HDRSM
           
         }
      
-
+        // yes
         private void button2_Click(object sender, EventArgs e)
         {
+            /*
             int indexOfErase = -1;
             for (int i = 0; i < Data.Data.storage.Count; i++)
             {
@@ -207,6 +226,9 @@ namespace HDRSM
                 }
             }
             Data.Data.storage.RemoveAt(indexOfErase);
+            */
+            CSV.Delete(new Product(textBox1.Text.Replace('h', 'H').Trim(),ushort.Parse(CSV.LFProdIDPlace(textBox1.Text.Replace('h', 'H').Trim()))));
+
             buttonAndLabelHidden();
 
             MessageBox.Show($"A {tb1ItemTemp} Törlésre került a rendszerből.");
@@ -214,6 +236,7 @@ namespace HDRSM
 
         }
 
+        // no
         private void button3_Click(object sender, EventArgs e)
         {
             buttonAndLabelHidden();
@@ -268,6 +291,16 @@ namespace HDRSM
         {
             PlaceChange newWindow = new PlaceChange();
             newWindow.ShowDialog();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            //CSV.proba();
+
+            /*
+            StockForm newWindow = new StockForm();
+            newWindow.ShowDialog();
+            */
         }
     }
 }
